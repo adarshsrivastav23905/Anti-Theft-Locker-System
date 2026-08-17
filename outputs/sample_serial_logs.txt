@@ -1,0 +1,33 @@
+==========================================================
+  ANTI-THEFT LOCKER SYSTEM - EMBEDDED C++ PLATFORM
+  Architecture: ESP32 DevKit V4 / Arduino Framework
+  Subsystems: Keypad + OLED + Servo + Buzzer + EEPROM
+  Author: Adarsh Srivastav
+==========================================================
+[SYS] System Initialized Successfully. Running FSM loop...
+[STATE] System armed in STATE_LOCKED
+[TELEMETRY] State: LOCKED | FailedAttempts: 0 | InputBuf:  | ServoUnlocked: NO
+[KEYPAD] Digit entered
+[TELEMETRY] State: ENTERING_PASS | FailedAttempts: 0 | InputBuf: * | ServoUnlocked: NO
+[KEYPAD] Digit entered
+[KEYPAD] Digit entered
+[KEYPAD] Digit entered
+[TELEMETRY] State: ENTERING_PASS | FailedAttempts: 0 | InputBuf: **** | ServoUnlocked: NO
+[KEYPAD] Submitted Password (#)
+[AUTH] ACCESS GRANTED! Correct password.
+[TELEMETRY] State: ACCESS_GRANTED | FailedAttempts: 0 | InputBuf:  | ServoUnlocked: YES
+[TIMED_OUT] Auto-lock timeout reached (5s). Locking system...
+[TELEMETRY] State: LOCKED | FailedAttempts: 0 | InputBuf:  | ServoUnlocked: NO
+[KEYPAD] Submitted Password (#)
+[AUTH] ACCESS DENIED! Incorrect password.
+[TELEMETRY] State: ACCESS_DENIED | FailedAttempts: 1 | InputBuf:  | ServoUnlocked: NO
+[KEYPAD] Submitted Password (#)
+[AUTH] ACCESS DENIED! Incorrect password.
+[TELEMETRY] State: ACCESS_DENIED | FailedAttempts: 2 | InputBuf:  | ServoUnlocked: NO
+[KEYPAD] Submitted Password (#)
+[AUTH] ACCESS DENIED! Incorrect password.
+[SECURITY] MAX FAILED ATTEMPTS REACHED! Triggering Alarm & Lockout.
+[TELEMETRY] State: ALARM_ACTIVE | FailedAttempts: 3 | InputBuf:  | ServoUnlocked: NO
+[BUTTON] Manual Lock / Reset Button Pressed!
+[STATE] System armed in STATE_LOCKED
+[TELEMETRY] State: LOCKED | FailedAttempts: 0 | InputBuf:  | ServoUnlocked: NO

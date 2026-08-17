@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "author": "Adarsh Srivastav",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 20,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled",
+      "top": 10,
+      "left": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad",
+      "top": -60,
+      "left": -260,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": 140,
+      "left": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": -140,
+      "left": 60,
+      "attrs": { "hasPassiveSound": "false" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_red",
+      "top": -140,
+      "left": 130,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_green",
+      "top": -140,
+      "left": 190,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_lock",
+      "top": 240,
+      "left": 180,
+      "attrs": { "color": "blue", "label": "Lock / Reset" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_red",
+      "top": -70,
+      "left": 130,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_green",
+      "top": -70,
+      "left": 190,
+      "attrs": { "value": "330" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    
+    [ "esp:3V3", "oled:VCC", "red", [ "v0" ] ],
+    [ "esp:GND.1", "oled:GND", "black", [ "v0" ] ],
+    [ "esp:21", "oled:SDA", "green", [ "v0" ] ],
+    [ "esp:22", "oled:SCL", "yellow", [ "v0" ] ],
+    
+    [ "keypad:R1", "esp:13", "purple", [ "v40" ] ],
+    [ "keypad:R2", "esp:12", "purple", [ "v45" ] ],
+    [ "keypad:R3", "esp:14", "purple", [ "v50" ] ],
+    [ "keypad:R4", "esp:27", "purple", [ "v55" ] ],
+    [ "keypad:C1", "esp:26", "blue", [ "v60" ] ],
+    [ "keypad:C2", "esp:25", "blue", [ "v65" ] ],
+    [ "keypad:C3", "esp:33", "blue", [ "v70" ] ],
+    [ "keypad:C4", "esp:32", "blue", [ "v75" ] ],
+    
+    [ "esp:18", "servo:PWM", "orange", [ "v0" ] ],
+    [ "esp:5V", "servo:V+", "red", [ "v0" ] ],
+    [ "esp:GND.2", "servo:GND", "black", [ "v0" ] ],
+    
+    [ "esp:15", "buzzer:2", "red", [ "v0" ] ],
+    [ "esp:GND.2", "buzzer:1", "black", [ "v0" ] ],
+    
+    [ "esp:2", "r_red:1", "red", [ "v0" ] ],
+    [ "r_red:2", "led_red:A", "red", [ "v0" ] ],
+    [ "esp:GND.2", "led_red:C", "black", [ "v0" ] ],
+    
+    [ "esp:4", "r_green:1", "green", [ "v0" ] ],
+    [ "r_green:2", "led_green:A", "green", [ "v0" ] ],
+    [ "esp:GND.2", "led_green:C", "black", [ "v0" ] ],
+    
+    [ "esp:5", "btn_lock:1.l", "blue", [ "v0" ] ],
+    [ "esp:GND.2", "btn_lock:2.l", "black", [ "v0" ] ]
+  ]
+}
