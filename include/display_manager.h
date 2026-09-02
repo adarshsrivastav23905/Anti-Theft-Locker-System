@@ -7,7 +7,7 @@
  * @details Manages the SSD1306 OLED display via I2C protocol (SDA=GPIO21, SCL=GPIO22).
  *          Provides pre-built screen wireframes for all FSM states:
  *          - Splash screen (boot animation)
- *          - Locked screen with password mask [****]
+ *          - Locked screen with password mask [****]    
  *          - Access Granted screen
  *          - Access Denied screen with remaining attempts
  *          - Security Lockout countdown screen
