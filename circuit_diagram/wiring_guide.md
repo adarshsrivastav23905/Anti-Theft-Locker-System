@@ -9,7 +9,7 @@
 1. Connect OLED `VCC` to ESP32 `3.3V`.
 2. Connect OLED `GND` to breadboard Ground Rail.
 3. Connect OLED `SDA` to ESP32 `GPIO 21`.
-4. Connect OLED `SCL` to ESP32 `GPIO 22`.
+4. Connect OLED `SCL` to ESP32 `GPIO 22`.    
 
 ## 3. 4x4 Matrix Keypad Connections
 1. Connect Keypad Row 1 pin to ESP32 `GPIO 13`.
