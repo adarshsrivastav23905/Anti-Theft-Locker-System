@@ -1,7 +1,7 @@
 ==========================================================
   ANTI-THEFT LOCKER SYSTEM - EMBEDDED C++ PLATFORM
   Architecture: ESP32 DevKit V4 / Arduino Framework
-  Subsystems: Keypad + OLED + Servo + Buzzer + EEPROM
+  Subsystems: Keypad + OLED + Servo + Buzzer + EEPROM     
   Author: Adarsh Srivastav
 ==========================================================
 [SYS] System Initialized Successfully. Running FSM loop...
