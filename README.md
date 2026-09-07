@@ -2,7 +2,7 @@
 
 > A comprehensive, industry-oriented embedded security locker controller built with **ESP32 DevKit V4 / Embedded C++** that features a 4x4 matrix keypad input with password masking (`[****]`), local visual status updates on a 128×64 SSD1306 I2C OLED display, SG90 PWM servo motor latch control ($0^\circ$ Locked / $90^\circ$ Unlocked), automatic 5-second re-locking, persistent NVS flash memory authentication storage, an anti-brute-force 3-state security lockout mechanism with a pulsing acoustic siren alarm ($1.66\text{ Hz}$), manual override reset switches, and real-time 115200 baud UART telemetry.
 
-**Adarsh Srivastav**
+**Adarsh Srivastav**  
 Computer Science and Engineering (CSE) Student
 Embedded Systems | IoT | Python | AI
 
